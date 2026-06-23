@@ -1,0 +1,484 @@
+.contact-section {
+  width: var(--cWidth);
+  max-width: var(--cMaxWidth);
+  margin: auto;
+  padding: 100px 0 50px 0;
+  position: relative;
+  z-index: 2;
+  background-color: var(--backgroundColor);
+}
+
+.contact-section h2 {
+  font-size: 50px;
+  line-height: 50px;
+  font-family: "Geist", sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 50px;
+  letter-spacing: 2px;
+}
+
+.contact-section h2 span {
+  color: var(--accentColor);
+  font-weight: 200;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 50px;
+  width: 100%;
+  margin-bottom: 80px;
+}
+
+@media only screen and (min-width: 1024px) {
+  .contact-grid {
+    grid-template-columns: 1.1fr 1fr;
+    gap: 80px;
+  }
+}
+
+/* Left Details Panel */
+.contact-details-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.contact-box-left h4 {
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin: 0 0 25px 0;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.contact-box-left h4:not(:first-child) {
+  margin-top: 40px;
+}
+
+/* Contact Item Card */
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background: rgba(255, 255, 255, 0.01);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  border-radius: 12px;
+  padding: 18px 20px;
+  margin-bottom: 15px;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.contact-item:hover {
+  background: rgba(255, 255, 255, 0.03);
+  border-color: rgba(34, 211, 238, 0.15);
+  transform: translateX(5px);
+}
+
+.contact-item-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  color: var(--accentColor);
+  width: 40px;
+  height: 40px;
+  background: rgba(94, 234, 212, 0.05);
+  border-radius: 8px;
+}
+
+.contact-item-info {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.contact-label {
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.3);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 4px;
+}
+
+.contact-link {
+  font-size: 14.5px;
+  color: rgba(255, 255, 255, 0.85);
+  font-weight: 400;
+  text-decoration: none;
+  word-break: break-all;
+  transition: color 0.2s ease;
+}
+
+.contact-link:hover {
+  color: var(--accentColor);
+}
+
+/* Copy Button & Tooltip */
+.copy-btn {
+  background: transparent;
+  border: none;
+  color: rgba(255, 255, 255, 0.35);
+  font-size: 16px;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.copy-btn:hover {
+  color: var(--accentColor);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.copy-btn .copied-icon {
+  color: #2ec866;
+}
+
+.copy-btn .tooltip {
+  position: absolute;
+  bottom: 125%;
+  left: 50%;
+  transform: translateX(-50%) translateY(5px);
+  background: #0f172a;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  padding: 5px 10px;
+  font-size: 11px;
+  border-radius: 4px;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.25s cubic-bezier(0.25, 0.8, 0.25, 1);
+  pointer-events: none;
+}
+
+.copy-btn:hover .tooltip {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* Education styling */
+.education-box {
+  background: rgba(255, 255, 255, 0.01);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.education-degree {
+  font-size: 15px;
+  font-weight: 500;
+  color: #ffffff;
+  margin: 0 0 6px 0;
+}
+
+.education-college {
+  font-size: 13.5px;
+  color: rgba(255, 255, 255, 0.7);
+  margin: 0 0 4px 0;
+}
+
+.education-location {
+  font-size: 12.5px;
+  color: rgba(255, 255, 255, 0.4);
+  margin: 0;
+}
+
+/* Social Links Box */
+.contact-social-row {
+  margin-top: 40px;
+}
+
+.social-links-flex {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+a.contact-social {
+  font-size: 15px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: rgba(255, 255, 255, 0.6);
+  border-bottom: 1px dashed rgba(255, 255, 255, 0.2);
+  padding-bottom: 4px;
+  transition: all 0.2s ease;
+}
+
+a.contact-social:hover {
+  color: var(--accentColor);
+  border-bottom-color: var(--accentColor);
+  transform: translateY(-2px);
+}
+
+/* Right Column: Contact Form Box */
+.contact-form-box {
+  background: rgba(255, 255, 255, 0.01);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 16px;
+  padding: 40px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  position: relative;
+  margin-bottom: 35px;
+  width: 100%;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 12px 0;
+  color: #ffffff;
+  font-size: 15px;
+  font-family: "Geist", sans-serif;
+  outline: none;
+  transition: border-color 0.3s ease;
+  box-sizing: border-box;
+}
+
+.form-group textarea {
+  resize: none;
+}
+
+.form-group label {
+  position: absolute;
+  left: 0;
+  top: 12px;
+  color: rgba(255, 255, 255, 0.35);
+  font-size: 15px;
+  pointer-events: none;
+  transition: all 0.25s ease;
+  font-family: "Geist", sans-serif;
+}
+
+/* Active Floating Label Logic */
+.form-group input:focus ~ label,
+.form-group input:not(:placeholder-shown) ~ label,
+.form-group textarea:focus ~ label,
+.form-group textarea:not(:placeholder-shown) ~ label {
+  top: -14px;
+  font-size: 12px;
+  color: var(--accentColor);
+}
+
+.form-line {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--accentColor);
+  transition: width 0.3s ease;
+}
+
+.form-group input:focus ~ .form-line,
+.form-group textarea:focus ~ .form-line {
+  width: 100%;
+}
+
+/* Submit & Reset Button styling */
+.submit-btn {
+  background: transparent;
+  border: 1px solid var(--accentColor);
+  color: #ffffff;
+  padding: 14px 28px;
+  border-radius: 30px;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Geist", sans-serif;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  position: relative;
+  overflow: hidden;
+  align-self: flex-start;
+}
+
+.submit-btn:hover {
+  background: var(--accentColor);
+  color: #050810;
+  box-shadow: 0 0 15px rgba(94, 234, 212, 0.4);
+  transform: translateY(-2px);
+}
+
+.submit-btn:disabled {
+  border-color: rgba(255, 255, 255, 0.1);
+  cursor: not-allowed;
+}
+
+/* Spinner */
+.spinner {
+  width: 18px;
+  height: 18px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: #ffffff;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Success Message Box */
+.success-message-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px 0;
+  animation: fadeInForm 0.5s ease-out forwards;
+}
+
+.success-icon-wrap {
+  width: 70px;
+  height: 70px;
+  background: rgba(46, 200, 102, 0.08);
+  border: 1px solid rgba(46, 200, 102, 0.25);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 25px;
+}
+
+.success-icon {
+  font-size: 32px;
+  color: #2ec866;
+}
+
+.success-message-box h3 {
+  font-size: 26px;
+  font-weight: 500;
+  color: #ffffff;
+  margin: 0 0 12px 0;
+  font-family: "Geist", sans-serif;
+}
+
+.success-message-box p {
+  font-size: 14.5px;
+  color: rgba(255, 255, 255, 0.6);
+  line-height: 1.6;
+  margin: 0 0 30px 0;
+  max-width: 320px;
+  font-family: "Geist", sans-serif;
+}
+
+.reset-btn {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.8);
+  padding: 10px 22px;
+  border-radius: 20px;
+  font-size: 13.5px;
+  cursor: pointer;
+  font-family: "Geist", sans-serif;
+  transition: all 0.25s ease;
+}
+
+.reset-btn:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.25);
+}
+
+@keyframes fadeInForm {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Footer & Credits Row */
+.contact-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  padding-top: 40px;
+  margin-top: 40px;
+}
+
+.footer-credits h2 {
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 1.4;
+  margin: 0;
+}
+
+.footer-credits h2 span {
+  color: var(--accentColor);
+}
+
+.footer-copyright h5 {
+  font-size: 16px;
+  font-weight: 500;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: rgba(255, 255, 255, 0.35);
+}
+
+/* Responsive Overrides */
+@media only screen and (max-width: 1023px) {
+  .contact-section h2 {
+    font-size: 40px;
+    margin-bottom: 35px;
+  }
+  .contact-form-box {
+    padding: 30px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .contact-section {
+    padding: 60px 0 40px 0;
+  }
+  .contact-grid {
+    gap: 40px;
+    margin-bottom: 50px;
+  }
+  .contact-social-row {
+    margin-top: 30px;
+  }
+  .contact-footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 25px;
+    padding-top: 30px;
+  }
+}

@@ -1,0 +1,169 @@
+.about-section {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  place-items: center;
+  position: relative;
+  opacity: 1;
+  height: auto;
+  width: var(--cWidth);
+  margin: auto;
+}
+.about-me {
+  padding: 50px 0px;
+  padding-bottom: 0;
+  width: 500px;
+  max-width: calc(100% - 15px);
+}
+.about-me h3 {
+  font-size: 25px;
+  text-transform: uppercase;
+  letter-spacing: 7px;
+  font-weight: 400;
+  color: var(--accentColor);
+  margin-bottom: 20px;
+}
+
+/* Glassmorphic card styling */
+.about-card {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 24px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+  margin-top: 15px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-card:hover {
+  border-color: rgba(34, 211, 238, 0.2);
+  box-shadow: 0 15px 40px rgba(34, 211, 238, 0.05);
+}
+
+.about-bio {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.95);
+  margin: 0;
+  margin-bottom: 16px;
+  font-family: "Geist", sans-serif;
+}
+
+.about-bio strong {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.about-specialties {
+  font-size: 14.5px;
+  font-weight: 300;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.7);
+  margin: 0;
+  margin-bottom: 25px;
+  font-family: "Geist", sans-serif;
+}
+
+.about-projects-section h4 {
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 500;
+  color: var(--accentColor);
+  margin: 0 0 15px 0;
+}
+
+.about-projects-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.project-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 10px 16px;
+  border-radius: 8px;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.project-card:hover {
+  background: rgba(34, 211, 238, 0.06);
+  border-color: rgba(34, 211, 238, 0.25);
+  transform: translateX(6px);
+  box-shadow: 0 4px 15px rgba(34, 211, 238, 0.08);
+}
+
+.project-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: var(--accentColor);
+  box-shadow: 0 0 8px var(--accentColor);
+}
+
+.project-card h5 {
+  font-size: 13.5px;
+  font-weight: 500;
+  color: #ffffff;
+  margin: 0;
+  font-family: "Geist", sans-serif;
+}
+
+@media only screen and (min-width: 600px) {
+  .about-section {
+    justify-content: center;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .about-me {
+    width: 500px;
+    max-width: calc(100% - 70px);
+    transform: translateY(0%);
+  }
+  .about-section {
+    opacity: 1;
+  }
+  .about-card {
+    padding: 30px;
+  }
+}
+@media only screen and (min-width: 1025px) {
+  .about-section {
+    width: var(--cWidth);
+    justify-content: right;
+    max-width: 1920px;
+    height: var(--vh);
+    padding: 0px;
+    opacity: 1;
+  }
+  .about-me {
+    padding: 0px;
+    width: 45%;
+    max-width: 550px;
+  }
+  .about-bio {
+    font-size: 1.25vw;
+    line-height: 1.8vw;
+  }
+  .about-specialties {
+    font-size: 1vw;
+    line-height: 1.5vw;
+  }
+}
+@media only screen and (min-width: 1950px) {
+  .about-bio {
+    font-size: 1.6rem;
+    line-height: 2.2rem;
+  }
+  .about-specialties {
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+  }
+}

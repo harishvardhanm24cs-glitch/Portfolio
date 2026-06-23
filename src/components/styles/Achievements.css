@@ -1,0 +1,172 @@
+.achievements-section {
+  width: var(--cWidth);
+  max-width: var(--cMaxWidth);
+  margin: auto;
+  padding: 100px 0;
+  position: relative;
+}
+
+.achievements-section h2 {
+  font-size: 50px;
+  line-height: 50px;
+  font-family: "Geist", sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 50px;
+  letter-spacing: 2px;
+}
+
+.achievements-section h2 span {
+  color: var(--accentColor);
+  font-weight: 200;
+}
+
+/* Timeline Layout */
+.achievements-timeline {
+  position: relative;
+  width: 100%;
+  margin-top: 40px;
+  display: flex;
+}
+
+.timeline-line {
+  position: absolute;
+  left: 20px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.timeline-progress-line {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, var(--accentColor), #14b8a6);
+  transform-origin: top;
+  scaleY: 0;
+  box-shadow: 0 0 10px rgba(34, 211, 238, 0.4);
+}
+
+.achievements-list {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  width: 100%;
+  padding-left: 55px;
+}
+
+/* Glassmorphic timeline card */
+.achievement-card {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  background: rgba(255, 255, 255, 0.015);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  padding: 24px;
+  position: relative;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+/* Timeline card connection dot */
+.achievement-card::before {
+  content: "";
+  position: absolute;
+  left: -40px;
+  top: 30px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--backgroundColor);
+  border: 3px solid rgba(255, 255, 255, 0.2);
+  z-index: 2;
+  transition: all 0.3s ease;
+}
+
+.achievement-card:hover::before {
+  border-color: var(--accentColor);
+  background: var(--accentColor);
+  box-shadow: 0 0 10px var(--accentColor);
+}
+
+.achievement-card:hover {
+  background: rgba(255, 255, 255, 0.04);
+  border-color: rgba(34, 211, 238, 0.2);
+  transform: translateX(8px);
+  box-shadow: 0 15px 35px rgba(34, 211, 238, 0.05);
+}
+
+.achievement-icon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  font-size: 20px;
+  flex-shrink: 0;
+  transition: all 0.3s ease;
+}
+
+.achievement-card:hover .achievement-icon-wrapper {
+  background: rgba(34, 211, 238, 0.1);
+  border-color: rgba(34, 211, 238, 0.3);
+  transform: rotate(-10deg) scale(1.1);
+}
+
+.achievement-content-box {
+  flex: 1;
+}
+
+.achievement-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-bottom: 8px;
+}
+
+.achievement-header h3 {
+  font-size: 18px;
+  font-weight: 500;
+  color: #ffffff;
+  margin: 0;
+  font-family: "Geist", sans-serif;
+  letter-spacing: 0.5px;
+}
+
+.achievement-badge {
+  background: rgba(34, 211, 238, 0.08);
+  border: 1px solid rgba(34, 211, 238, 0.25);
+  color: var(--accentColor);
+  padding: 4px 12px;
+  font-size: 11px;
+  border-radius: 20px;
+  font-family: "Geist", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 500;
+}
+
+.achievement-desc {
+  font-size: 14px;
+  line-height: 1.6;
+  font-weight: 300;
+  color: #adacac;
+  margin: 0;
+  font-family: "Geist", sans-serif;
+}
+
+@media only screen and (max-width: 600px) {
+  .achievement-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+}
