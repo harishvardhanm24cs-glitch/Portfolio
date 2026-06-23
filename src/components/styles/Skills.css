@@ -1,0 +1,144 @@
+.skills-section {
+  width: var(--cWidth);
+  max-width: var(--cMaxWidth);
+  margin: auto;
+  padding: 100px 0;
+  position: relative;
+}
+
+.skills-section h2 {
+  font-size: 50px;
+  line-height: 50px;
+  font-family: "Geist", sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+  letter-spacing: 2px;
+}
+
+.skills-section h2 span {
+  color: var(--accentColor);
+  font-weight: 200;
+}
+
+/* Floating WebGL Canvas Container */
+.skills-canvas-container {
+  width: 100%;
+  height: 400px;
+  position: relative;
+  overflow: clip;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  background: rgba(255, 255, 255, 0.005);
+  border-radius: 16px;
+  margin-bottom: 60px;
+}
+
+.skills-canvas {
+  width: 100%;
+  height: 100%;
+}
+
+/* Professional Skills Area */
+.pro-skills-container {
+  text-align: center;
+  width: 100%;
+}
+
+.pro-skills-container h3 {
+  font-size: 24px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  color: #ffffff;
+  margin: 0 0 35px 0;
+  font-family: "Geist", sans-serif;
+  text-transform: uppercase;
+}
+
+.pro-skills-container h3 span {
+  color: var(--accentColor);
+  font-weight: 300;
+}
+
+.pro-skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  max-width: 950px;
+  margin: auto;
+}
+
+/* Glassmorphic Professional Badge */
+.pro-skill-badge {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 12px 24px;
+  border-radius: 30px;
+  font-size: 14.5px;
+  color: rgba(255, 255, 255, 0.8);
+  font-family: "Geist", sans-serif;
+  font-weight: 400;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  letter-spacing: 0.5px;
+}
+
+.pro-skill-dot {
+  width: 8px;
+  height: 8px;
+  background: var(--accentColor);
+  border-radius: 50%;
+  box-shadow: 0 0 8px var(--accentColor);
+  transition: transform 0.3s ease;
+}
+
+/* Hover highlights */
+.pro-skill-badge:hover {
+  background: rgba(34, 211, 238, 0.07);
+  border-color: rgba(34, 211, 238, 0.35);
+  color: #ffffff;
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 10px 25px rgba(34, 211, 238, 0.12);
+}
+
+.pro-skill-badge:hover .pro-skill-dot {
+  transform: scale(1.3);
+}
+
+/* Responsive sizes */
+@media only screen and (max-width: 900px) {
+  .skills-section h2 {
+    font-size: 40px;
+  }
+  .skills-canvas-container {
+    height: 300px;
+    margin-bottom: 45px;
+  }
+  .pro-skills-container h3 {
+    font-size: 20px;
+    margin-bottom: 25px;
+  }
+  .pro-skill-badge {
+    padding: 10px 20px;
+    font-size: 13px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .skills-canvas-container {
+    height: 250px;
+  }
+  .pro-skills-grid {
+    gap: 10px;
+  }
+  .pro-skill-badge {
+    padding: 8px 16px;
+    font-size: 12.5px;
+  }
+}
