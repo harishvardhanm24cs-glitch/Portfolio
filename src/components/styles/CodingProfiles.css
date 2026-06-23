@@ -1,0 +1,176 @@
+.profiles-section {
+  width: var(--cWidth);
+  max-width: var(--cMaxWidth);
+  margin: auto;
+  padding: 100px 0;
+  position: relative;
+}
+
+.profiles-section h2 {
+  font-size: 50px;
+  line-height: 50px;
+  font-family: "Geist", sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 50px;
+  letter-spacing: 2px;
+}
+
+.profiles-section h2 span {
+  color: var(--accentColor);
+  font-weight: 200;
+}
+
+.profiles-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 25px;
+  width: 100%;
+}
+
+@media only screen and (min-width: 640px) {
+  .profiles-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .profiles-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Glassmorphic Profile Card */
+.profile-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 16px;
+  padding: 35px 25px;
+  text-decoration: none;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.profile-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: transparent;
+  transition: background-color 0.3s ease;
+}
+
+/* Icon layout and sizing */
+.profile-icon {
+  font-size: 45px;
+  margin-bottom: 20px;
+  color: rgba(255, 255, 255, 0.7);
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.profile-details h3 {
+  font-size: 20px;
+  font-weight: 500;
+  color: #ffffff;
+  margin: 0 0 8px 0;
+  font-family: "Geist", sans-serif;
+  letter-spacing: 0.5px;
+}
+
+.profile-details p {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.4);
+  margin: 0 0 25px 0;
+  font-family: "Geist", sans-serif;
+}
+
+.profile-link-btn {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--accentColor);
+  font-family: "Geist", sans-serif;
+  border: 1px solid rgba(34, 211, 238, 0.2);
+  background: rgba(34, 211, 238, 0.02);
+  padding: 6px 14px;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+  letter-spacing: 0.5px;
+}
+
+/* Hover effects */
+.profile-card:hover {
+  transform: translateY(-8px);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.profile-card:hover .profile-icon {
+  transform: scale(1.15);
+}
+
+.profile-card:hover .profile-link-btn {
+  background: var(--accentColor);
+  color: #0f002c;
+  border-color: var(--accentColor);
+  box-shadow: 0 0 10px rgba(34, 211, 238, 0.4);
+}
+
+/* Branded customizations */
+
+/* GitHub */
+.profile-github::before {
+  background: #ffffff;
+}
+.profile-github:hover {
+  border-color: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 15px 35px rgba(255, 255, 255, 0.08);
+}
+.profile-github:hover .profile-icon {
+  color: #ffffff;
+}
+
+/* LeetCode */
+.profile-leetcode::before {
+  background: #ffa116;
+}
+.profile-leetcode:hover {
+  border-color: rgba(255, 161, 22, 0.25);
+  box-shadow: 0 15px 35px rgba(255, 161, 22, 0.08);
+}
+.profile-leetcode:hover .profile-icon {
+  color: #ffa116;
+}
+
+/* GeeksForGeeks */
+.profile-geeksforgeeks::before {
+  background: #2f8d46;
+}
+.profile-geeksforgeeks:hover {
+  border-color: rgba(47, 141, 70, 0.25);
+  box-shadow: 0 15px 35px rgba(47, 141, 70, 0.08);
+}
+.profile-geeksforgeeks:hover .profile-icon {
+  color: #2f8d46;
+}
+
+/* HackerRank */
+.profile-hackerrank::before {
+  background: #2ec866;
+}
+.profile-hackerrank:hover {
+  border-color: rgba(46, 200, 102, 0.25);
+  box-shadow: 0 15px 35px rgba(46, 200, 102, 0.08);
+}
+.profile-hackerrank:hover .profile-icon {
+  color: #2ec866;
+}
