@@ -1,0 +1,251 @@
+.ij-section {
+  width: var(--cWidth);
+  max-width: var(--cMaxWidth);
+  margin: auto;
+  padding: 100px 0;
+  position: relative;
+}
+
+.ij-section h2 {
+  font-size: 50px;
+  line-height: 50px;
+  font-family: "Geist", sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 70px;
+  letter-spacing: 2px;
+}
+
+.ij-section h2 span {
+  color: var(--accentColor);
+  font-weight: 200;
+}
+
+/* Timeline Container */
+.ij-timeline {
+  position: relative;
+  width: 100%;
+}
+
+/* Central vertical progress line */
+.ij-timeline-line {
+  position: absolute;
+  left: 20px;
+  top: 0;
+  width: 2px;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.ij-progress-line {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--accentColor);
+  transform-origin: top;
+  box-shadow: 0 0 10px rgba(94, 234, 212, 0.5);
+}
+
+/* Cards Wrapper */
+.ij-cards-container {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+  width: 100%;
+  position: relative;
+}
+
+.ij-card-wrapper {
+  width: 100%;
+  position: relative;
+  box-sizing: border-box;
+  padding-left: 45px;
+}
+
+/* Marker Circle */
+.ij-marker {
+  position: absolute;
+  left: 0;
+  top: 25px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #0f172a;
+  border: 2px solid var(--accentColor);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 5;
+  transform: translateX(-50%);
+  box-shadow: 0 0 10px rgba(94, 234, 212, 0.25);
+  transition: all 0.3s ease;
+}
+
+.ij-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  color: var(--accentColor);
+  transition: transform 0.4s ease;
+}
+
+/* Glassmorphic Card Details */
+.ij-card {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  padding: 28px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  position: relative;
+}
+
+.ij-date {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--accentColor);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.ij-card-header h3 {
+  font-size: 20px;
+  font-weight: 500;
+  color: #ffffff;
+  margin: 0 0 8px 0;
+  font-family: "Geist", sans-serif;
+  letter-spacing: 0.5px;
+}
+
+.ij-badge {
+  font-size: 11px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 4px 10px;
+  border-radius: 20px;
+  display: inline-block;
+  margin-bottom: 18px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.ij-desc {
+  font-size: 13.5px;
+  color: rgba(255, 255, 255, 0.65);
+  line-height: 1.6;
+  margin: 0;
+  font-family: "Geist", sans-serif;
+}
+
+/* Hover effects for mobile */
+.ij-card:hover {
+  background: rgba(255, 255, 255, 0.04);
+  border-color: rgba(34, 211, 238, 0.25);
+  transform: translateX(6px);
+  box-shadow: 0 15px 35px rgba(34, 211, 238, 0.08);
+}
+
+.ij-card-wrapper:hover .ij-marker {
+  background: var(--accentColor);
+  box-shadow: 0 0 15px rgba(94, 234, 212, 0.6);
+}
+
+.ij-card-wrapper:hover .ij-icon {
+  color: #0f002c;
+  transform: scale(1.2) rotate(15deg);
+}
+
+/* Desktop Alternating Styles */
+@media only screen and (min-width: 1024px) {
+  .ij-timeline-line {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .ij-card-wrapper {
+    width: 50%;
+    padding-left: 0;
+  }
+
+  .ij-card-wrapper.left {
+    align-self: flex-start;
+    padding-right: 45px;
+  }
+
+  .ij-card-wrapper.right {
+    align-self: flex-end;
+    padding-left: 45px;
+  }
+
+  /* Left/Right markers centering */
+  .ij-card-wrapper.left .ij-marker {
+    left: auto;
+    right: -20px;
+    transform: translateY(-50%) translateX(50%);
+    top: 50%;
+  }
+
+  .ij-card-wrapper.right .ij-marker {
+    left: -20px;
+    transform: translateY(-50%) translateX(-50%);
+    top: 50%;
+  }
+
+  /* Left/Right hover shifts */
+  .ij-card-wrapper.left .ij-card:hover {
+    transform: translateX(-8px);
+  }
+
+  .ij-card-wrapper.right .ij-card:hover {
+    transform: translateX(8px);
+  }
+
+  /* Connectors on desktop */
+  .ij-card::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 12px;
+    height: 12px;
+    background: rgba(15, 23, 42, 0.9);
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    border-left: 1px solid rgba(255, 255, 255, 0.05);
+    transform: translateY(-50%) rotate(45deg);
+    z-index: 1;
+    transition: all 0.4s ease;
+  }
+
+  .ij-card.left::after {
+    right: -7px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    border-right: 1px solid rgba(255, 255, 255, 0.05);
+    border-bottom: none;
+    border-left: none;
+  }
+
+  .ij-card.right::after {
+    left: -7px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    border-left: 1px solid rgba(255, 255, 255, 0.05);
+    border-top: none;
+    border-right: none;
+  }
+
+  /* Connector glows on hover */
+  .ij-card-wrapper.left:hover .ij-card::after {
+    border-color: rgba(34, 211, 238, 0.25);
+  }
+
+  .ij-card-wrapper.right:hover .ij-card::after {
+    border-color: rgba(34, 211, 238, 0.25);
+  }
+}
