@@ -2,7 +2,7 @@
 
 A cutting-edge personal portfolio built with **React**, **TypeScript**, **Three.js**, **React Three Fiber**, and **GSAP** — featuring a physics-based 3D character scene, floating interactive tech icons, an Innovation Journey timeline, and smooth scroll-driven animations.
 
-> 🌐 **Live Site:** [https://harshvardhan.netlify.app/](https://harshvardhan.netlify.app/)  
+> 🌐 **Live Site:** [https://harshvardhan.netlify.app/](https://clever-sundae-dc717c.netlify.app/)  
 > 📧 **Email:** harishvardhanm24cs@psnacet.edu.in  
 > 💼 **LinkedIn:** [linkedin.com/in/harsh-vardhan2005](https://linkedin.com/in/harsh-vardhan2005)  
 > 🐙 **GitHub:** [github.com/harishvardhanm24cs-glitch](https://github.com/harishvardhanm24cs-glitch)
